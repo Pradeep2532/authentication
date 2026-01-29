@@ -9,11 +9,11 @@ export default function AuthProvider({
 }: {
   children: React.ReactNode;
 }) {
-  const setToken = useAuthStore((s) => s.setToken);
-  const setRoles = useAuthStore((s) => s.setRoles);
-  const setAuthReady = useAuthStore((s) => s.setAuthReady);
-  const setEmail = useAuthStore((s) => s.setEmail);
-  const logout = useAuthStore((s) => s.logout);
+  const setToken = useAuthStore((s:any) => s.setToken);
+  const setRoles = useAuthStore((s: any) => s.setRoles);
+  const setAuthReady = useAuthStore((s: any) => s.setAuthReady);
+  const setEmail = useAuthStore((s: any) => s.setEmail);
+  const logout = useAuthStore((s: any) => s.logout);
 
   useEffect(() => {
     const initAuth = async () => {

@@ -13,15 +13,15 @@ type AuthState = {
   logout: () => void;
 };
 
-export const useAuthStore = create<AuthState>((set) => ({
+export const useAuthStore = create<AuthState>((set: any) => ({
   accessToken: null,
   roles: [],
   email: null,
   authReady: false,
 
-  setToken: (token) => set({ accessToken: token }),
-  setRoles: (roles) => set({ roles }),
-  setEmail: (email) => set({ email }),   // ✅ FIX
+  setToken: (token: any) => set({ accessToken: token }),
+  setRoles: (roles: any) => set({ roles }),
+  setEmail: (email: any) => set({ email }),   
   setAuthReady: () => set({ authReady: true }),
 
   logout: () =>

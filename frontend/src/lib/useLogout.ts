@@ -6,7 +6,7 @@ import { useAuthStore } from "@/store/authStore";
 
 export const useLogout = () => {
   const router = useRouter();
-  const logoutStore = useAuthStore((s) => s.logout);
+  const logoutStore = useAuthStore((s:any) => s.logout);
 
   const logout = async () => {
     try {
